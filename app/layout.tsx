@@ -5,6 +5,8 @@ import { Navbar } from "@/components/navbar"
 import { Logo } from "@/components/logo"
 import { JsonLd } from "@/components/json-ld"
 import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react"
+
 
 
 const rubik = Rubik({ 
@@ -58,6 +60,7 @@ export default function RootLayout({
           <main className="flex-1 container mx-auto px-4 py-8">
             {children}
             <SpeedInsights></SpeedInsights>
+            <Analytics/>
           </main>
           <footer className="border-t">
             <div className="container mx-auto px-4 py-6 text-center text-sm text-muted-foreground">
