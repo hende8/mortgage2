@@ -4,6 +4,8 @@ import "./globals.css"
 import { Navbar } from "@/components/navbar"
 import { Logo } from "@/components/logo"
 import { JsonLd } from "@/components/json-ld"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 const rubik = Rubik({ 
   subsets: ["hebrew", "latin"],
@@ -44,6 +46,7 @@ export default function RootLayout({
       </head>
       <body className={rubik.className}>
         <div className="flex min-h-screen flex-col">
+          
           <header className="border-b">
             <div className="container mx-auto px-4">
               <div className="flex h-16 items-center justify-between">
@@ -54,6 +57,7 @@ export default function RootLayout({
           </header>
           <main className="flex-1 container mx-auto px-4 py-8">
             {children}
+            <SpeedInsights></SpeedInsights>
           </main>
           <footer className="border-t">
             <div className="container mx-auto px-4 py-6 text-center text-sm text-muted-foreground">
