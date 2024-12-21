@@ -41,7 +41,6 @@ export default function RootLayout({
     <html lang="he" dir="rtl">
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <JsonLd />
       </head>
       <body className={rubik.className}>
         <div className="flex min-h-screen flex-col">
@@ -62,6 +61,7 @@ export default function RootLayout({
             </div>
           </footer>
         </div>
+        <JsonLd />
       </body>
     </html>
   )
